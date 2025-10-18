@@ -60,5 +60,10 @@ GROUP BY
   purchase_date
 ORDER BY
   purchase_date
+---
+  💡 Key Business Insight (Time Series Analysis)
+Analyzing the Time Series Chart (Total Users and Total Purchases Over Time) reveals the following critical observation:
 
-  
+December Peak: December 2020 is a peak for both users and purchases (likely due to holiday sales/promotions).
+
+Insight: While the Total Users saw a sharp increase in December, the corresponding rise in Total Purchases was not proportional to the user growth. This suggests a potential issue with user quality during that period or a bottleneck in the conversion funnel (e.g., site speed, stock issues). This finding would warrant further deep-dive analysis into the December traffic sources and promotional strategies.
