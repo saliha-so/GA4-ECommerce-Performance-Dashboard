@@ -44,6 +44,15 @@ The most critical technical aspect of this project is extracting meaningful metr
 1.  **UNNEST Function:** The `event_params` field in GA4 is an `ARRAY`. I utilized the `UNNEST` function to access the critical e-commerce values like `transaction_id` (`value.string_value`) and `value` (`value.double_value`) nested within this array.
 2.  **Purchase Metric:** To accurately count `total_purchases`, I combined the `event_name = 'purchase'` condition with a `COUNT(DISTINCT...)` on the extracted `transaction_id` to ensure unique purchases were counted.
 
+---
+##💡 Key Business Insight (Time Series Analysis)
+Analyzing the Time Series Chart (Total Users and Total Purchases Over Time) reveals the following critical observation:
+
+December Peak: December 2020 is a peak for both users and purchases (likely due to holiday sales/promotions).
+
+Insight: While the Total Users saw a sharp increase in December, the corresponding rise in Total Purchases was not proportional to the user growth. This suggests a potential issue with user quality during that period or a bottleneck in the conversion funnel (e.g., site speed, stock issues). This finding would warrant further deep-dive analysis into the December traffic sources and promotional strategies.
+
+
 The complete SQL query used is provided below:
 
 ```sql
@@ -60,10 +69,3 @@ GROUP BY
   purchase_date
 ORDER BY
   purchase_date
----
-  💡 Key Business Insight (Time Series Analysis)
-Analyzing the Time Series Chart (Total Users and Total Purchases Over Time) reveals the following critical observation:
-
-December Peak: December 2020 is a peak for both users and purchases (likely due to holiday sales/promotions).
-
-Insight: While the Total Users saw a sharp increase in December, the corresponding rise in Total Purchases was not proportional to the user growth. This suggests a potential issue with user quality during that period or a bottleneck in the conversion funnel (e.g., site speed, stock issues). This finding would warrant further deep-dive analysis into the December traffic sources and promotional strategies.
