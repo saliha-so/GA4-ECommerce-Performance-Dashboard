@@ -2,7 +2,7 @@
 
 This project utilizes public Google Analytics 4 (GA4) e-commerce sample data (BigQuery Public Dataset) to extract key business performance indicators (KPIs) and visualize them using Looker Studio.
 
-The goal is to demonstrate my ability to navigate the complex GA4 schema (specifically nested event parameters), calculate core e-commerce metrics (Revenue, Purchases), and present the findings in a visually clear, user-friendly dashboard.
+The goal is to demonstrate my ability to navigate the complex GA4 schema (specifically nested event parameters), perform deep-dive traffic segmentation, calculate core e-commerce metrics (Revenue, Purchases), and present the findings in a visually clear, user-friendly dashboard.
 
 ## 🚀 Project Summary and Outputs
 
@@ -35,14 +35,6 @@ The image below shows the main output of the project:
 * **Data Modeling & Processing:** Google BigQuery (Standard SQL)
 * **Data Visualization:** Google Looker Studio (formerly Data Studio)
 
-## 💻 Technical Deep Dive: BigQuery SQL
-
-The most critical technical aspect of this project is extracting meaningful metrics from the complex, nested structure of GA4 event data.
-
-### Key Metric Extraction Points:
-
-1.  **UNNEST Function:** The `event_params` field in GA4 is an `ARRAY`. I utilized the `UNNEST` function to access the critical e-commerce values like `transaction_id` (`value.string_value`) and `value` (`value.double_value`) nested within this array.
-2.  **Purchase Metric:** To accurately count `total_purchases`, I combined the `event_name = 'purchase'` condition with a `COUNT(DISTINCT...)` on the extracted `transaction_id` to ensure unique purchases were counted.
 
 ---
 ##💡 Key Business Insight (Time Series Analysis)
@@ -51,6 +43,10 @@ Analyzing the Time Series Chart (Total Users and Total Purchases Over Time) reve
 December Peak: December 2020 is a peak for both users and purchases (likely due to holiday sales/promotions).
 
 Insight: While the Total Users saw a sharp increase in December, the corresponding rise in Total Purchases was not proportional to the user growth. This suggests a potential issue with user quality during that period or a bottleneck in the conversion funnel (e.g., site speed, stock issues). This finding would warrant further deep-dive analysis into the December traffic sources and promotional strategies.
+
+### **The Pivot Table Bridge (From 'What' to 'Why'):**
+
+This insight mandated the creation of a second, more granular analysis. I used a **Pivot Table** combined with a new **SQL query** (Grouping by `source` and `medium`) to determine *which specific traffic channels* were responsible for the drop in conversion efficiency. This transition from time-based reporting to channel-based segmentation forms the core of the project's strategic value.
 
 
 The complete SQL query used is provided below:
