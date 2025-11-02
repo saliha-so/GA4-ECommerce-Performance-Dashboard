@@ -24,9 +24,8 @@ You can explore the interactive version of the dashboard here:
 
 The image below shows the main output of the project:
 
-![GA4 E-Commerce Performance Dashboard View]<img width="1351" height="587" alt="dashbo[GA4_E-commerce_Performance_Dashboard.pdf](https://github.com/user-attachments/files/23292008/GA4_E-commerce_Performance_Dashboard.pdf)
-ard_final png" src="https://github.com/user-attachments/assets/13af12f6-b9cd-438a-810d-33b8a8e8002b" />
-[Uploading GA4_E-commerce_Performance_Dashboard.pdf…]()
+![GA4 E-Commerce Performance Dashboard View]<img width="2542" height="1822" alt="dashboard png" src="https://github.com/user-attachments/assets/97120db1-11ff-4e50-aa5e-518be315cec9" />
+
 
 
 ---
