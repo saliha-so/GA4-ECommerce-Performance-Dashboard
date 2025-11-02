@@ -1,0 +1,31 @@
+## 🎤 Project Storytelling: From Data Anomaly to Actionable Strategy
+
+**Analyst's Goal:** To find out why user growth did not lead to equal purchase growth, and to recommend where the marketing budget should be spent.
+
+### Phase 1: Finding the Problem (The "What Happened")
+
+* **Chart Focus:** Time Series Chart (Users and Purchases Over Time).
+* **What I Saw:** The chart clearly showed a high peak in December 2020 for both users and purchases.
+* **The Issue:** However, the number of purchases did not increase as much as the number of new users. This suggested that the new traffic coming in was of **low quality** or that there was a problem preventing sales.
+* **The Next Step:** This required me to move from looking at dates (Time Series) to looking at sources (Channels) to find the cause.
+
+### Phase 2: Finding the Cause (The "Why")
+
+* **Chart Focus:** The clean Pivot Table (Marketing Channel Grouping).
+* **Technical Solution:** I used Looker Studio Calculated Fields to group the complicated `source/medium` data into simple, business-friendly channel names. The final table was sorted by Revenue.
+
+#### Key Findings (The Strategic Insights):
+
+| Channel Grouping | Performance Metric | Status | Strategic Implication |
+| :--- | :--- | :--- | :--- |
+| **Organic Search** | **$66.0K Revenue** | The Best | **Our SEO is very strong** and is the main source of income. |
+| **High-Value Referral** | **1.68% CR** | The Most Efficient | This channel brings in high-quality traffic, resulting in the **highest Conversion Rate** of our core channels. |
+| **Paid Search (Google Ads)** | **0.85% CR** | Poor Performance | This important channel has the **lowest conversion rate** and brings the least amount of revenue ($6.3K). |
+
+### Phase 3: My Recommendation (The "So What?")
+
+The analysis clearly shows where we are losing money and where we should invest:
+
+> **"We have a major problem with the Paid Search channel (0.85% CR). This budget is not working efficiently. My strong recommendation is to immediately review the Google Ads strategy and reduce the budget.**
+>
+> **The saved money should be used to grow the High-Value Referral partnerships, as this channel has proven to deliver the highest quality, most profitable traffic."**
